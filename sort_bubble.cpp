@@ -13,7 +13,7 @@ int main() {
 			if (arr[j] > arr[j + 1]) {
 				int tmp;
 				tmp = arr[j];
-				arr[j] = arr[j + 1];
+				arr[j] = arr[j + 1]; 
 				arr[j + 1] = tmp;
 			}
 		}
