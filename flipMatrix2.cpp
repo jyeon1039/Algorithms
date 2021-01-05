@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ 
 int main() {
 	int N;
 	int map[10][10];

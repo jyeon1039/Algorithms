@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ 
 int map[5][5] = { 0, };
 
 void checkMap(int number) {

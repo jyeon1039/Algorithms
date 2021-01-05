@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ 
 int main() {
 	int arr[8][8];
 	int row = 0, col = 0;

@@ -1,6 +1,6 @@
 #include <stdio.h>
-
-int main() {
+ 
+int main()  {
 	int K, N;
 	int arr[100000] = { 0, };
 	scanf("%d %d", &N, &K);

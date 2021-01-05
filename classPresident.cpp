@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ 
 int main() {
 	int N;
 	int information[1001][5] = { 0, };

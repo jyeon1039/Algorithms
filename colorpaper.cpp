@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+ 
 int main() {
 	int N;
 	int map[101][101] = { 0, };
