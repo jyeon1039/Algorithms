@@ -1,5 +1,5 @@
 #include <stdio.h> 
-
+ 
 int main() {
 	int N, X, Y, R;
 	scanf("%d", &N);
