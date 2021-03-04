@@ -6,11 +6,9 @@ int dx[4] = {0, -1, 0, 1};
 int dy[4] = {-1, 0, 1, 0};
 set<int> result_set;
 int tmp[7] = {0, };
-int visited[4][4] = {0, };
 
 void dfs(int map[][4], int x, int y, int n){
     tmp[n] = map[x][y];
-    visited[x][y] = 1;
     
     if(n >= 6){
         int num = 0;
@@ -54,7 +52,7 @@ int main(int argc, char** argv)
         }
         
         cout << "#" << test_case << " " << result_set.size() << "\n";
-        result_set.clear(); // ¸ğµç ¿ø¼Ò »èÁ¦
+        result_set.clear(); // ëª¨ë“  ì›ì†Œ ì‚­ì œ
 	}
 	return 0;
 }
