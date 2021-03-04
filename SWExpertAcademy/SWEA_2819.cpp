@@ -5,27 +5,18 @@ using namespace std;
 int dx[4] = {0, -1, 0, 1};
 int dy[4] = {-1, 0, 1, 0};
 set<int> result_set;
-int tmp[7] = {0, };
 
-void dfs(int map[][4], int x, int y, int n){
-    tmp[n] = map[x][y];
+void dfs(int map[][4], int x, int y, int val, int depth){
+    val = val*10 + map[x][y];
     
-    if(n >= 6){
-        int num = 0;
-        int factor = 1;
-        for(int i=6; i>=0; i--){
-            num += factor * tmp[i];
-            factor *= 10;
-        }
-        
-        result_set.insert(num);
-    }
+    if(depth >= 6)
+        result_set.insert(val);
     else{
         for(int i=0; i<4; i++){
             int nx = x+dx[i];
             int ny = y+dy[i];
             if(nx >= 0 && nx < 4 && ny >= 0 && ny < 4)
-               	dfs(map, nx, ny, n+1);
+               	dfs(map, nx, ny, val, depth+1);
         }
     }
 }
@@ -48,7 +39,7 @@ int main(int argc, char** argv)
         
         for(int i=0; i<4; i++){
             for(int j=0; j<4; j++)
-                dfs(map, i, j, 0);
+                dfs(map, i, j, 0, 0);
         }
         
         cout << "#" << test_case << " " << result_set.size() << "\n";
